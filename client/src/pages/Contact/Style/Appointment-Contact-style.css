@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color:black; /* Set background color to white */
+}
+
+.appointment-container {
+    text-align: center;
+    padding: 0px;
+    margin-top: -150px; /* Adjust this value to move the container up */
+    width: 80%;
+    margin-left: auto;
+    background-color: white; /* Set background color to white */
+    margin-right: auto;
+}
+
+.appointment {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px; /* Adjust this value to move the sections up */
+}
+
+.back-color-white{    background-color: white; /* Set background color to white */
+}
+
+
+.appointment-form h1, .contact-us h1 {
+    font-size: 50px;
+    margin-bottom: 50px; /* This margin pushes the content below */
+    color: #000;
+    line-height: 1.2; /* Adjusts the space between lines if the text wraps */
+}
+
+.appointment-form, .contact-us {
+    width: 45%;
+    margin-top: 30px; /* Add some margin at the top to avoid overlap */
+}
+
+
+.appointment-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-form input, .appointment-form textarea {
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+
+    padding: 15px; /* Increase padding to make the input larger */
+    font-size: 18px; /* Increase font size to make the input larger */
+    border: 1px solid #9d9797;
+    border-radius: 40px;
+    background-color: rgb(229, 229, 229); /* Set background color to white */
+    color: #888282; /* Set text color to black */
+}
+.appointment-form input[type="date"]::-webkit-calendar-picker-indicator,
+.appointment-form input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(32%) sepia(99%) saturate(7462%) hue-rotate(1deg) brightness(108%) contrast(126%);
+}
+
+.appointment-form textarea {
+    resize: none;
+    height: 150px; /* Increase height of the textarea */
+}
+
+.appointment-form button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.appointment-form button:hover {
+    background-color: darkred;
+}
+.contact-us p {
+    background-color: white; /* Set background color to white */
+    margin: 10px 12px;
+    font-size: 18px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    text-align: left; /* Align text to the left */
+}
+
+.contact-us h1 {
+    text-align: left; /* Align the heading to the left */
+    margin-bottom: 105px; /* Adjust margin to add space below the heading */
+}
+
+
+
+.contact-us strong {
+    color: red;
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+strong {
+    z-index: 1;
+}
+
+
+/* Ensure full-width white background on smaller screens */
+/* Ensure full-width white background on smaller screens */
+@media (max-width: 768px) {
+    body {
+        background-color: white; /* Ensure the body's background is white */
+    }
+
+
+
+    .appointment {
+        flex-direction: column;
+        align-items: center;
+        padding: px; /* Adjust padding to reduce space if needed */
+    }
+
+    .appointment-form, .contact-us {
+        width: 100%; /* Full width for both sections */
+        margin: 10px 0; /* Adjust margin to space out sections */
+    }
+
+    .contact-us {
+        margin-top: 80px; /* Additional margin to push the Contact Us section further down */
+    }
+}
+

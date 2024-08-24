@@ -1,0 +1,89 @@
+.background-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 1em;
+  animation: slideDown 1s ease-out;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  animation: slideDown 1s ease-out;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  animation: slideDown 1s ease-out;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.step-number {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+.step-name {
+  font-size: 1.2em;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
