@@ -2,9 +2,9 @@ import React from "react";
 import "../Style/Appointment-Contact-style.css";
 const AppointmentContainer = () => {
   return (
-    <div className="bg-black text-white">
-      <div className="appointment-container">
-        <div className="appointment">
+    <div className="bg-[#F5F5F5] pt-36 text-white">
+      <div className="appointment-container bg-gray-50">
+        <div className="appointment bg-[#F5F5F5]">
           <div className="appointment-form">
             <h1 className="text-3xl mb-6 text-white">
               LET'S BOOK AN APPOINTMENT
