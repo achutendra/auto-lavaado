@@ -45,7 +45,7 @@ const Home = () => {
       <ClientReviews/>
 
       </div>
-      <div className="" style={{ marginTop: "100px"}}>
+      <div className="">
         <AppointmentContainer />
       </div>
       <Footer />
