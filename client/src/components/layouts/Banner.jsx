@@ -6,21 +6,21 @@ const Banner = () => {
 
   return (
     <div className="relative h-full">
-      <div className="absolute top-1/2 transform -translate-y-1/2 w-full text-left text-white px-10">
-        <h2 className="text-2xl mb-4 mt-20 font-sans tracking-widest">
+      <div className="absolute top-1/2 transform -translate-y-1/2 w-full text-left text-white px-6 sm:px-12 lg:px-16">
+        <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl mb-4 mt-6 lg:mt-20 font-sans tracking-widest">
           #1 Detailing Car Services in India
         </h2>
         <div>
-        <h1 className="text-8xl font mb-4  leading-none font-anton ">
-          KEEP YOUR CAR <br /> CLEAN ALWAYS
-        </h1>
+          <h1 className="text-7xl sm:text-7xl md:text-7xl lg:text-8xl font-anton mb-4 leading-none">
+            KEEP YOUR CAR <br /> CLEAN ALWAYS
+          </h1>
         </div>
-        <p className="text-xl mt-10 font-sans">
+        <p className="text-base sm:text-xl md:text-xl lg:text-2xl mt-12 sm:mt-12 lg:mt-10 font-sans">
           Auto Lavaado is a brand which is literally going to change <br />
           the way people think about car cleaning.
         </p>
         <button
-          className="bg-red-600 hover:bg-white hover:text-red-600 text-white py-2 mt-10 px-8 text-xl font-bold rounded-full border border-transparent hover:border-red-600 transition duration-300"
+          className="bg-red-600 hover:bg-white hover:text-red-600 text-white py-2 px-6 sm:py-3 sm:px-8 text-lg sm:text-xl font-bold rounded-full border border-transparent hover:border-red-600 transition duration-300 mt-6 sm:mt-8 lg:mt-10"
           onClick={() => navigate("/contact")}
         >
           GET AN APPOINTMENT

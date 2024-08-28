@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Service1 from "../../images/service1.jpeg";
 import Service2 from "../../images/service2.jpeg";
 import Service3 from "../../images/service3.jpeg";
@@ -7,20 +7,37 @@ import Service5 from "../../images/service5.jpeg";
 import Service6 from "../../images/service6.jpeg";
 
 const ServiceItem = ({ image, title, description, link }) => {
+  const [showFullDetails, setShowFullDetails] = useState(false);
+
+  const handleToggleDetails = () => {
+    setShowFullDetails(!showFullDetails);
+  };
+
   return (
     <div className="w-full p-4">
-      <div className="flex mb-8">
-        <img src={image} alt={title} className="w-80 h-80 object-cover mr-5" />
-        <div className="ml-6">
-          <h3 className="text-5xl mt-4 mb-2 font-anton text-white">{title}</h3>
-          <p className="mt-2 mb-5 font-sans text-gray-300">{description}</p>
-          <a
-            href={link}
-            className="text-white mt-7 inline-block font-bebas text-2xl hover:text-red-600"
+      <div className="flex flex-col md:flex-row mb-8">
+        <img
+          src={image}
+          alt={title}
+          className="w-full md:w-80 h-auto object-cover mb-4 md:mb-0 md:mr-5"
+        />
+        <div className="ml-0 md:ml-6">
+          <h3 className="text-3xl md:text-5xl font-anton text-white">
+            {title}
+          </h3>
+          <p className="mt-2 mb-5 font-sans text-base sm:text-lg md:text-gray-300">
+            {showFullDetails
+              ? description
+              : description.length > 150
+              ? `${description.substring(0, 150)}...`
+              : description}
+          </p>
+          <button
+            className="text-white mt-4 inline-block font-bebas text-lg sm:text-xl md:text-2xl hover:text-red-600 cursor-pointer"
+            onClick={handleToggleDetails}
           >
-            
-            VIEW DETAILS
-          </a>
+            {showFullDetails ? "SHOW LESS" : "VIEW DETAILS"}
+          </button>
         </div>
       </div>
     </div>
@@ -74,39 +91,36 @@ const OurServices = () => {
   ];
 
   return (
-    <>
-      <section className="py-16 bg-black">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="col-span-1 p-4 sticky top-20 self-start">
-            <div className="border-l-4 border-red-600 pl-14">
-              <h2 className="text-6xl font-anton text-white">COMPLEX</h2>
-              <h2 className="text-6xl font-anton text-white">SERVICES</h2>
-              <p className="mt-4 text-lg text-gray-400">
-                Auto Lavaado offers a range of
-              </p>
-              <p className="mt-1 text-lg text-gray-400">
-                customizable services to cater to your
-              </p>
-              <p className="mt-1 text-lg text-gray-400">specific needs.</p>
-            </div>
-          </div>
-          <div
-            className="col-span-2 md:col-span-2 p-4 overflow-y-scroll h-[calc(100vh-64px)]"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {serviceItems.map((service, idx) => (
-              <ServiceItem
-                key={idx}
-                image={service.image}
-                title={service.title}
-                description={service.description}
-                link={service.link}
-              />
-            ))}
+    <section className="py-16 bg-black">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="col-span-1 p-4 sticky top-0 self-start bg-black">
+          <div className="border-l-4 border-red-600 pl-14">
+            <h2 className="text-6xl md:text-6xl font-anton text-white">
+              COMPLEX
+              SERVICES
+            </h2>
+            <p className="mt-10 mb-20  font-sans  sm:text-lg md:text-gray-400">
+              Auto Lavaado offers a range of customizable services to cater to
+              your specific needs.
+            </p>
           </div>
         </div>
-      </section>
-    </>
+        <div
+          className="col-span-2 md:col-span-2 p-4 overflow-y-scroll h-[calc(100vh-64px)]"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {serviceItems.map((service, idx) => (
+            <ServiceItem
+              key={idx}
+              image={service.image}
+              title={service.title}
+              description={service.description}
+              link={service.link}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

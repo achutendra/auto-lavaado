@@ -16,6 +16,7 @@ export default {
   },
   plugins: [
     require("@tailwindcss/forms"),
+    require("@tailwindcss/line-clamp"),
     function ({ addUtilities }) {
       addUtilities({
         ".clip-path-custom-slant": {
@@ -23,5 +24,6 @@ export default {
         },
       });
     },
+    
   ],
 };

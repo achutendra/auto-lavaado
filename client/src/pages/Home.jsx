@@ -8,46 +8,42 @@ import Banner from "../components/layouts/Banner";
 import Detailing from "../components/layouts/Detailing";
 import TeamDetails from "../components/layouts/TeamDetails";
 import ServiceCarousel from "../components/layouts/ServiceCarousel";
-import ClientReviews from "../components/layouts/ClientReviews.jsx"
-
+import ClientReviews from "../components/layouts/ClientReviews";
 
 const Home = () => {
   return (
     <>
       <Header />
       <div
-        className="relative w-full h-[100vh] bg-cover bg-no-repeat bg-center opacity-90"
+        className="relative w-full h-screen bg-cover bg-no-repeat bg-center opacity-90"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        
         <Banner />
       </div>
-      <OurServices />
-
-      <div style={{ marginTop: "100px" }} >
-      <Detailing />
+      <div className="py-10 md:py-16 lg:py-20">
+        <OurServices />
       </div>
 
+      <div className="py-10 md:py-16 lg:py-20">
+        <Detailing />
+      </div>
 
-      <div style={{ marginTop: "100px" }}>
+      <div className="py-10 md:py-16 lg:py-20">
         <ServiceCarousel />
       </div>
 
-      <div style={{ marginTop: "100px" }}>
+      <div className="py-10 md:py-16 lg:py-20 bg-white">
         <TeamDetails />
       </div>
 
-
-      <div className="bg-white mx-auto">
-
-     
-
-      <ClientReviews/>
-
+      <div className="py-10 md:py-16 lg:py-20 bg-white">
+        <ClientReviews />
       </div>
-      <div className="">
+
+      <div className="py-10 md:py-16 lg:py-20">
         <AppointmentContainer />
       </div>
+
       <Footer />
     </>
   );
