@@ -5,7 +5,7 @@ const Banner = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative h-full">
+    <div className="relative h-screen overflow-hidden">
       <div className="absolute top-1/2 transform -translate-y-1/2 w-full text-left text-white px-6 sm:px-12 lg:px-16">
         <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl mb-4 mt-6 lg:mt-20 font-sans tracking-widest">
           #1 Detailing Car Services in India
