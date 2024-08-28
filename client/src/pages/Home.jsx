@@ -44,7 +44,10 @@ const Home = () => {
         <AppointmentContainer />
       </div>
 
+      <div className="mx-[5%] lg:mx-[4%]">
       <Footer />
+
+      </div>
     </>
   );
 };

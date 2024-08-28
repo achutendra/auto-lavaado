@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    background-color:#F5F5F5; /* Set background color to white */
+    background-color:white; /* Set background color to white */
 }
 
 
@@ -12,14 +12,15 @@ body {
     padding: 30px; /* Adjust this value to move the sections up */
 }
 
-.back-color-white{    background-color: #F5F5F5; /* Set background color to white */
+.back-color-white{    background-color: white; /* Set background color to white */
 }
 
 
 .appointment-form h1, .contact-us h1 {
-    font-size: 50px;
+    font-family: 'mono', sans-serif;
     margin-bottom: 50px; /* This margin pushes the content below */
     color: #000;
+    text-align:left;
     line-height: 1.2; /* Adjusts the space between lines if the text wraps */
 }
 
@@ -33,26 +34,47 @@ body {
     flex-direction: column;
 }
 
+
+.appointment-form input::placeholder {
+    color: #7e8895;
+    font-weight:900;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #94a3b8da;
+    font-weight:900;
+  }
+
 .appointment-form input, .appointment-form textarea {
-    margin-bottom: 15px;
+    @media only screen and (max-width: 600px) {
+    margin-bottom: 6px;
+    }
+    margin-bottom: 1px;
     font-family: 'Lato', sans-serif;
 
-    padding: 15px; /* Increase padding to make the input larger */
-    font-size: 18px; /* Increase font size to make the input larger */
-    border: 1px solid #9d9797;
+    padding: 10px; /* Increase padding to make the input larger */
+    font-size: 15px; /* Increase font size to make the input larger */
+    border: 1px solid #94a3b871;
     border-radius: 40px;
-    background-color: rgb(229, 229, 229); /* Set background color to white */
-    color: #888282; /* Set text color to black */
+    background-color: white; /* Set background color to white */
+    color: #1e293b; /* Set text color to black */
 }
 .appointment-form input[type="date"]::-webkit-calendar-picker-indicator,
 .appointment-form input[type="time"]::-webkit-calendar-picker-indicator {
     filter: invert(32%) sepia(99%) saturate(7462%) hue-rotate(1deg) brightness(108%) contrast(126%);
 }
 
+.appointment-form input[type="date"], .appointment-form input[type="time"] {
+    color:#7e8895 ;
+}
 .appointment-form textarea {
     resize: none;
-    height: 150px; /* Increase height of the textarea */
+    border-radius:20px;
+    padding:25px;
+    height: 135px; /* Increase height of the textarea */
 }
+
 
 .appointment-form button {
     font-size: 16px;
@@ -63,11 +85,9 @@ body {
     cursor: pointer;
 }
 
-.appointment-form button:hover {
-    background-color: darkred;
-}
+
 .contact-us p {
-    background-color: #F5F5F5; /* Set background color to white */
+    background-color: white; /* Set background color to white */
     font-size: 18px;
     color: #000;
     font-family: 'Roboto', sans-serif;
@@ -82,10 +102,10 @@ body {
 
 
 .contact-us strong {
-    color: red;
-    font-family: 'Anton', sans-serif;
-    font-size: 24px;
-    opacity: 0.7;
+    color: #e12f2f;
+    font-family: 'mono', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
 }
 
 strong {

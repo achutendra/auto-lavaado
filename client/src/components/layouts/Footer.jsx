@@ -5,11 +5,12 @@ import { faFacebook, faInstagram,  faTwitter } from '@fortawesome/free-brands-sv
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-200 py-6">
+    <footer className="bg-white text-gray-200 py-6">
+      <div className="h-px w-full mb-10 bg-stone-400"></div>
       <div className="container mx-auto px-4">
         <div className="flex flex-col justify-center items-center space-y-4">
           <div className="text-center">
-            <p>© Auto Lavaado. All Rights Reserved 2024. Licensing</p>
+            <p className="text-stone-700">© Auto Lavaado. All Rights Reserved 2024. Licensing</p>
             <p className="text-gray-400">Keep In Touch With Us On - </p>
           </div>
           <div className="flex space-x-4">
