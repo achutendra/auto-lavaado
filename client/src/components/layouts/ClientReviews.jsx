@@ -49,7 +49,7 @@ function ClientReviews() {
         </h1>
       </div>
       <div ref={sliderRef} className="flex overflow-hidden scroll-smooth slider lg:ml-20" >
-        <div className="w-[100vw] mr-5 sm:mr-8 md:mr-10">
+        <div className="w-[100vw] mr-3 sm:mr-8 md:mr-10">
           <Card
             image={car1}
             clientsName="ravi m."

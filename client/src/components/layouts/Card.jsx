@@ -4,8 +4,8 @@ function Card({image, clientsName, review, carName, service}) {
   const nameFirstLetter = clientsName.toUpperCase().charAt(0);
   return (
     <div className='inline-block sm:flex md:flex lg:flex h-[60vh] w-[90vw]'>
-      <div className='sm:w-[60%] md:w-[60%] lg:w-[60%]'>
-        <img className='h-[350px]  w-[307px] sm:h-auto sm:w-[370px] md:h-[95%] md:w-[390px] lg:h-[80%] lg:w-[65%]' src={image} alt="" />
+      <div className='w-[100vw] sm:w-[60%] md:w-[60%] lg:w-[60%]'>
+        <img className='h-[350px] w-full sm:h-auto sm:w-[370px] md:h-[95%] md:w-[390px] lg:h-[80%] lg:w-[65%]' src={image} alt="" />
       </div>
       <div className='sm:w-[50%] md:w-[50%] lg:w-[50%] sm:ml-7 lg:mr-8'>
       <div className='flex justify-start items-center my-10 sm:my-0 md:my-0 lg:my-0'>

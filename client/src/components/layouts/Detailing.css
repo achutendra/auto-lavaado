@@ -1,0 +1,17 @@
+/* Detailing.css */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .relative {
+    overflow-x: hidden; /* Ensure children don't cause overflow */
+  }
+  
+  .container {
+    max-width: 100%;
+  }
+  
+  h2, p, button {
+    word-break: break-word; /* Prevent text from overflowing */
+  }
+  

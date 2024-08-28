@@ -1,6 +1,6 @@
 import React from "react";
 
-import Video from "../Images/ContactUS-Background-video.mp4";
+import Video from "../Images/ContactUS-Background-image.jpg";
 
 const ContentContainer = () => {
   return (

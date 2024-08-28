@@ -4,15 +4,7 @@ body {
     background-color:#F5F5F5; /* Set background color to white */
 }
 
-.appointment-container {
-    text-align: center;
-    padding: 0px;
-    margin-top: -150px; /* Adjust this value to move the container up */
-    width: 80%;
-    margin-left: auto;
-    background-color: #F5F5F5; /* Set background color to white */
-    margin-right: auto;
-}
+
 
 .appointment {
     display: flex;
@@ -32,7 +24,6 @@ body {
 }
 
 .appointment-form, .contact-us {
-    width: 45%;
     margin-top: 30px; /* Add some margin at the top to avoid overlap */
 }
 
@@ -64,12 +55,11 @@ body {
 }
 
 .appointment-form button {
-    padding: 15px;
     font-size: 16px;
     border: none;
     background-color: red;
     color: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
 }
 
@@ -78,7 +68,6 @@ body {
 }
 .contact-us p {
     background-color: #F5F5F5; /* Set background color to white */
-    margin: 10px 12px;
     font-size: 18px;
     color: #000;
     font-family: 'Roboto', sans-serif;
