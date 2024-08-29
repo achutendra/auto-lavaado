@@ -6,19 +6,15 @@
   import person4 from "../../images/person4.jpg";
   import person5 from "../../images/person5.jpg";
   import person6 from "../../images/person6.jpg";
-  import person7 from "../../images/person7.jpg";
-  import person8 from "../../images/person8.jpg";
   
   const TeamDetails = () => {
     const serviceItems = [
-      { image: person1, name: "Amit Mishra", position: "Founder of CarWash" },
-      { image: person2, name: "Neeraj Prajapati", position: "Service Advisor" },
-      { image: person3, name: "Ved Mishra", position: "Body Shop Manager" },
-      { image: person4, name: "Amit", position: "Head Mechanic" },
-      { image: person5, name: "Person 5", position: "Assistant Manager" },
-      { image: person6, name: "Person 6", position: "Customer Service" },
-      { image: person7, name: "Person 7", position: "Detailing Expert" },
-      { image: person8, name: "Person 8", position: "Technician" },
+      { image: person1, name: "Manish Shukla", position: "Founder of CarWash" },
+      { image: person4, name: "Neeraj Prajapati", position: "Service Advisor" },
+      { image: person3, name: "Ankur Mishra", position: "" },
+      { image: person5, name: "Amit", position: "Head Mechanic" },
+      { image: person2, name: "Amit Mishra", position: "" },
+      { image: person6, name: "Ved Mishra", position: "Bodyshop manager" }
     ];
   
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,7 +68,7 @@
                 &lt;
               </button>
   
-              <div className="flex items-center justify-center space-x-4">
+              <div className="flex items-center justify-center space-x-4 my-4">
                 {[-1, 0, 1].map((offset) => {
                   const person =
                     serviceItems[getCircularIndex(currentIndex + offset)];
@@ -116,17 +112,21 @@
             {/* Mobile carousel */}
             <div className="md:hidden overflow-x-auto flex space-x-4" ref={scrollContainerRef}>
               {serviceItems.map((person) => (
+                
                 <div
                   key={person.name}
-                  className="flex-shrink-0 w-3/4 p-2 text-center"
+                  className="flex-shrink-0  p-2 text-center"
                 >
                   <img
                     src={person.image}
                     alt={person.name}
-                    className="rounded-full mx-auto"
+                    // className="rounded-full mx-auto"
+                    className={`rounded-full mx-auto ${
+                       "border-4 border-blue-500" 
+                    }`}
                     style={{
-                      width: "150px",
-                      height: "150px",
+                      width: "200px",
+                      height: "200px",
                     }}
                   />
                   <h3 className="text-lg font-bold mt-4">{person.name}</h3>

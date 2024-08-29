@@ -12,10 +12,10 @@ function Card({image, clientsName, review, carName, service}) {
         <div className='bg-red-600 text-white rounded-full size-[60px] flex justify-center items-center font-anton text-3xl mr-10 uppercase'>{nameFirstLetter}</div>
         <span className='text-black text-3xl font-anton uppercase'>{clientsName}</span>
       </div>
-      <div className='my-8 '>
-            <q className='text-stone-500 text-[1.15rem]'>{review}</q>
+      <div className='my-8 h-[50%] lg:h-[30%]'>
+            <q className='text-stone-500 leading-6 text-[1.15rem]'>{review}</q>
       </div>
-      <div className='flex sm:mt-20 lg:mt-20 md:mt-20'>
+      <div className='flex sm:mt-20 lg:mt-20 md:mt-12 '>
       <IoIosStar className='text-[1.7rem] text-red-600' />
       <IoIosStar className='text-[1.7rem] text-red-600' />
       <IoIosStar className='text-[1.7rem] text-red-600' />

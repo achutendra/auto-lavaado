@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/layouts/Header";
 import bg from "../images/bg4.jpg";
 import Footer from "../components/layouts/Footer";
@@ -40,7 +39,7 @@ const Home = () => {
         <ClientReviews />
       </div>
 
-      <div className="py-10 md:py-16 lg:py-20">
+      <div className="py-10 md:py-16 lg:py-20 lg:ml-[2%]">
         <AppointmentContainer />
       </div>
 

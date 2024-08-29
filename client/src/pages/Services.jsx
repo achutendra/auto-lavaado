@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/layouts/Header";
 import backgroundImage from "../images/services.jpg";
 import Service1 from "../images/service1.jpeg";
@@ -10,19 +10,22 @@ import Service6 from "../images/service6.jpeg";
 import Footer from "../components/layouts/Footer";
 
 const ServiceItem = ({ image, title, description, link }) => {
+  const [showFullDescription, setShowFullDescription] = useState(false);
   return (
     <div className="w-full p-4">
-      <div className="flex mb-8">
-        <img src={image} alt={title} className="w-80 h-80 object-cover mr-5" />
-        <div className="ml-6">
+      <div className="flex flex-col md:flex-row mb-8">
+        <img src={image} alt={title} className="w-full md:w-80 h-80 object-cover mb-4 md:mr-5" />
+        <div className="ml-0 md:ml-6">
           <h3 className="text-5xl mt-4 mb-2 font-anton text-white">{title}</h3>
-          <p className="mt-2 mb-5 font-sans text-gray-400">{description}</p>
-          <a
-            href={link}
+          <p className={`mt-2 mb-5 font-sans text-gray-300 ${showFullDescription ? "" : "line-clamp-3"}`}>
+            {description}
+          </p>
+          <button
+            onClick={() => setShowFullDescription(!showFullDescription)}
             className="text-white mt-7 inline-block font-bebas text-2xl hover:text-red-600"
           >
-            VIEW DETAILS
-          </a>
+            {showFullDescription ? "SHOW LESS" : "VIEW DETAILS"}
+          </button>
         </div>
       </div>
     </div>
@@ -86,29 +89,28 @@ const Services = () => {
         >
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative z-10 flex items-center justify-center h-full">
-            <h1 className="text-white text-9xl font-extrabold mt-20 font-anton">
+            <h1 className="text-white  text-8xl font-extrabold mt-20 font-anton ">
               SERVICE LIST
             </h1>
           </div>
         </div>
 
-        <section className="py-16">
-          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="col-span-1 p-4 sticky top-20 self-start">
-              <div className="border-l-4 border-red-600 pl-14">
+        <section className="py-16 bg-black">
+        <div className="container mx-auto px-4">
+          
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="md:col-span-1 bg-black sticky top-0 md:top-20">
+              <div className="border-l-4 border-red-600 pl-14 py-4">
                 <h2 className="text-6xl font-anton text-white">COMPLEX</h2>
                 <h2 className="text-6xl font-anton text-white">SERVICES</h2>
-                <p className="mt-4 text-lg text-gray-400">
-                  Auto Lavaado offers a range of
+                <p className="mt-4 text-base sm:text-lg md:text-gray-400 text-white">
+                  Auto Lavaado offers a range of customizable services to cater to your specific needs.
                 </p>
-                <p className="mt-1 text-lg text-gray-400">
-                  customizable services to cater to your
-                </p>
-                <p className="mt-1 text-lg text-gray-400">specific needs.</p>
               </div>
             </div>
-            <div
-              className="col-span-2 md:col-span-2 p-4 overflow-y-scroll h-[calc(100vh-64px)]"
+
+            <div className="md:col-span-2 overflow-y-scroll h-[calc(100vh-64px)]"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {serviceItems.map((service, idx) => (
@@ -122,7 +124,8 @@ const Services = () => {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
         {/* Video Section */}
         <section className="bg-gray-900 py-16">
           <div className="container mx-auto px-4">

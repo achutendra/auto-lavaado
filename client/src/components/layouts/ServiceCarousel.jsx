@@ -4,11 +4,11 @@
 const ServiceCarousel = () => {
   const cards = [
     {
-      title: "CHOOSE YOUR SERVICE",
+      title: "CHOOSE ONE OF OUR SERVICE",
       description: "We have a team that is highly skilled in detail.",
       buttonText: "BOOK NOW",
-      bgcolor: "bg-white ",
-      textcolor: "text-red",
+      bgcolor: "bg-black ",
+      textcolor: "text-white",
     },
     {
       price: "$59",
@@ -77,7 +77,7 @@ const ServiceCarousel = () => {
             <div
               key={index}
               className={`flex-none w-full sm:w-3/4 md:w-1/2 lg:w-1/4 ${
-                index === 0 && window.innerWidth > 738 ? "bg-gray-700" : card.bgcolor
+                index === 0 && window.innerWidth > 738 ? "w-full" : card.bgcolor
               } p-8 rounded-lg mx-2 ${card.textcolor} text-center relative`}
               style={{ height: "400px" }}
             >
@@ -93,7 +93,7 @@ const ServiceCarousel = () => {
               <button
                 className={`bg-transparent hover:bg-black font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent absolute bottom-4 w-32 left-1/2 transform -translate-x-1/2 ${
                   card.bgcolor === "bg-white" ? "bg-black" : "bg-white"
-                } text-red-500 font-bold py-2 px-4 rounded-full`}
+                } text-black font-bold py-2 px-4 rounded-full`}
               >
                 {card.buttonText}
               </button>
@@ -101,6 +101,8 @@ const ServiceCarousel = () => {
           ))}
         </div>
       </div>
+
+      
       {/* Hide these buttons on mobile */}
       <button
         onClick={prevSlide}
