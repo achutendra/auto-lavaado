@@ -1,8 +1,11 @@
 import { useMediaQuery } from "react-responsive";
-import React,{useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Card from "./Card";
 import { CiCircleChevLeft } from "react-icons/ci";
 import { CiCircleChevRight } from "react-icons/ci";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import car3 from "../../images/car3.jpg";
 import car1 from "../../images/car1.jpg";
 import car2 from "../../images/car2.jpg";
@@ -10,33 +13,42 @@ import car2 from "../../images/car2.jpg";
 function ClientReviews() {
   const isSmallScreen = useMediaQuery({ maxWidth: 900 });
   const [currentIndex, setCurrentIndex] = useState(0);
-    const [cardCount, setCardCount] = useState(0);
-    const sliderRef = useRef(null);
+  const [cardCount, setCardCount] = useState(0);
+  const sliderRef = useRef(null);
 
-    useEffect(() => {
-        if (sliderRef.current) {
-            setCardCount(sliderRef.current.children.length);
-        }
-    }, [sliderRef.current]);
 
-    // Handle previous button click
-    const handleClickPrev = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-            const box = sliderRef.current;
-            let width = box.clientWidth;
-            box.scrollLeft -= width;
-        }
+  const [carousel, setCarousel] = useState(null);
+
+  useEffect(() => {
+    // Initialize the carousel
+    const $carousel = $('.owl-carousel').owlCarousel({
+      items: 1,
+      loop: true,
+      nav: true,
+      dots: false,
+      navText: ['', ''], // Clear default text
+    });
+
+    // Save the carousel instance
+    setCarousel($carousel);
+
+    // Clean up on component unmount
+    return () => {
+      $carousel.trigger('destroy.owl.carousel');
+      $carousel.off();
     };
+  }, []);
 
-     // Handle next button click
-     const handleClickNext = () => {
-      if (currentIndex < cardCount - 1) {
-          setCurrentIndex(currentIndex + 1);
-          const box = sliderRef.current;
-          let width = box.clientWidth;
-          box.scrollLeft += width;
-      }
+  const handleClickPrev = () => {
+    if (carousel) {
+      carousel.trigger('prev.owl.carousel');
+    }
+  };
+
+  const handleClickNext = () => {
+    if (carousel) {
+      carousel.trigger('next.owl.carousel');
+    }
   };
   return (
     <div className="pt-20 pb-20 mx-3 sm:mx-4 md:mx-4 ">
@@ -48,29 +60,25 @@ function ClientReviews() {
           client's reviews
         </h1>
       </div>
-      <div ref={sliderRef} className="flex overflow-hidden scroll-smooth slider lg:ml-20" >
-        <div className="w-[100vw] mr-3 sm:mr-8 md:mr-10">
+      <div className="lg:mx-[5%]">
+      <OwlCarousel className="owl-theme owl-carousel" items={1} loop dots={false}>
+        <div className="item">
           <Card
             image={car1}
             clientsName="ravi m."
-            review="My car's paintwork was flawless after the service; flaking and scratches disappeared, turning it
+            review="My car's paintwork was flawless after the service; scratches disappeared, turning it
 from a damaged to a brand-new, shining one.
-The staff was polite and professional, explaining car issues and replacing old bumpers and side
-skirts. The sleek, modern design improved appearance and performance, making the car
-squeal. Highly recommendable workshop."
+The staff was polite and professional, explaining car issues and replacing old bumpers. The sleek, modern design improved appearance and performance. Highly recommendable workshop."
             carName="Brezza"
             service="Paint"
           />
         </div>
-        <div
-          className="w-[100vw] mr-5 sm:mr-8 md:mr-10"
-          
-        >
+        <div className="item">
           <Card
             image={car2}
             clientsName="sarah l."
             review="The workshop was clean, organized, and confidently performed quality work. Staff used
-high-quality PPF to protect my car from scratches, chips, and UV damage, ensuring impressive
+high-quality materials ensuring impressive
 clarity and smooth finish.
 My car was thoroughly cleaned with impressive attention to detail, including the dashboard, the
 workshop team was attentive and caring about my vehicle."
@@ -78,7 +86,7 @@ workshop team was attentive and caring about my vehicle."
             service="Ceramic Coating"
           />
         </div>
-        <div className="w-[100vw]  sm:mr-8 md:mr-10">
+        <div className="item">
           <Card
             image={car3}
             clientsName="roshan"
@@ -87,14 +95,21 @@ workshop team was attentive and caring about my vehicle."
             service="Ceramic Coating"
           />
         </div>
+      </OwlCarousel>
       </div>
-
+      
+      
       <div className="flex justify-center sm:justify-end md:justify-end lg:justify-end my-3 lg:mr-20">
-        <CiCircleChevLeft onClick={handleClickPrev} disabled={currentIndex === 0} className="text-6xl mr-4 cursor-pointer hover:-mt-1" />
-        <CiCircleChevRight onClick={handleClickNext} disabled={currentIndex >= cardCount - 1} className="text-6xl cursor-pointer hover:-mt-1" />
+        <CiCircleChevLeft
+          onClick={handleClickPrev}
+          className="nav-prev text-6xl mr-4 cursor-pointer hover:-mt-1"
+        />
+        <CiCircleChevRight
+          onClick={handleClickNext}
+          className="nav-next text-6xl cursor-pointer hover:-mt-1"
+        />
       </div>
     </div>
-    
   );
 }
 

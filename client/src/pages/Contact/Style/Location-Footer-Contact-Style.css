@@ -41,7 +41,6 @@
     text-align: center;
     background: url('../Images/ContactUS-Background-image.jpg') no-repeat center center fixed;
     background-size: cover; /* Ensures the background covers the entire container */
-    height: 100vh; /* Ensure the container takes the full viewport height */
     width: 99vw; /* Ensure the container takes the full viewport width */
     margin: 0; /* Remove any default margin */
     padding: 0; /* Remove padding to avoid affecting layout */
@@ -173,7 +172,7 @@ h1 {
     }
 
     .location {
-        width: 90%; /* Make the location boxes take up more width */
+        width: 100%; /* Make the location boxes take up more width */
         max-width: 500px; /* Set a maximum width to prevent them from becoming too large */
     }
 }

@@ -127,7 +127,7 @@ const Services = () => {
         </div>
       </section>
         {/* Video Section */}
-        <section className="bg-gray-900 py-16">
+        <section className="bg-gray-600 py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-extrabold text-center mb-8 text-white">
               Watch Our Services in Action

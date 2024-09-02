@@ -2,10 +2,11 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <div className='location-body'>
-      <div className="container-contact">
-        <h1 style={{ fontSize: "48px", marginTop: "100px" }}>LOCATIONS</h1>
-        <div className="locations">
+    <div className='location-body '>
+      <div className="container-contact py-40 lg:py-28 ">
+        <div className='mx-auto'>
+        <h1 style={{ fontSize: "48px" }}>LOCATIONS</h1>
+        <div className="locations grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10 mx-5">
           <div className="location">
             <h2>AHIMAMAU WORKSHOP</h2>
             <p><span className="emoji">📍</span><span className="text">323 Sultanpur Road, near Prithvi Townhouse and Resort, Ahmamau, Gomti Nagar, Lucknow-226002</span></p>
@@ -38,8 +39,9 @@ const ContactUs = () => {
               <a href="#">Find us on map</a>
             </div>
           </div>
-        </div>
       </div>
+        </div>
+       </div>
     </div>
   );
 }

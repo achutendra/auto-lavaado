@@ -35,11 +35,11 @@ const Home = () => {
         <TeamDetails />
       </div>
 
-      <div className="py-10 md:py-16 lg:py-20 bg-white">
+      <div className=" bg-white">
         <ClientReviews />
       </div>
 
-      <div className="py-10 md:py-16 lg:py-20 lg:ml-[2%]">
+      <div className=" lg:ml-[2%]">
         <AppointmentContainer />
       </div>
 
