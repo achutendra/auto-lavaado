@@ -1,11 +1,11 @@
 import React from "react";
 
-import Video from "../Images/ContactUS-Background-video.mp4";
+import Video from "../assets/BgVideo.mp4";
 
 const ContentContainer = () => {
   return (
     <div className="background-video h-[100vh]">
-      <video autoPlay muted loop id="myVideo" src={Video} type="video/mp4">
+      <video autoPlay muted loop className="h-[90vh]" id="myVideo" src={Video} type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
       <div className="content-container px-4">

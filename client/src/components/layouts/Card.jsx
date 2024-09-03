@@ -3,10 +3,10 @@ import { IoIosStar } from "react-icons/io";
 function Card({ image, clientsName, review, carName, service }) {
   const nameFirstLetter = clientsName.toUpperCase().charAt(0);
   return (
-    <div className="inline-block sm:flex md:flex lg:flex lg:justify-between h-[60vh] w-[90vw] lg:w-[87vw] xl:w-[93vw] lg:h-auto xl:h-[55vh] sm:mr-0 lg:mr-2 md:mr-0">
+    <div className="inline-block sm:flex md:flex lg:flex lg:justify-between h-auto w-[90vw] lg:w-[87vw] xl:w-[93vw] xl:h-[55vh] sm:mr-0 lg:mr-2 md:mr-0">
       <div className="w-[100vw] sm:w-[60%] md:w-[60%] lg:w-[40%]">
         <img
-          className="h-[350px] w-full sm:h-auto sm:w-[370px] md:h-[95%] md:w-[390px] lg:h-[100%] lg:w-[100%] xl:w-[60%] "
+          className="h-[350px] w-full sm:h-[100%] sm:w-[370px] md:h-[60%] md:w-[390px] lg:h-[100%] lg:w-[100%] xl:w-[60%] "
           src={image}
           alt=""
         />
@@ -24,7 +24,7 @@ function Card({ image, clientsName, review, carName, service }) {
           <q className="text-stone-500 leading-6 text-[1.15rem]">{review}</q>
         </div>
         <div className="">
-        <div className="flex lg:mt-20 md:mt-12 ">
+        <div className="flex flex-wrap lg:mt-20 md:mt-12 ">
           <IoIosStar className="text-[1.7rem] text-red-600" />
           <IoIosStar className="text-[1.7rem] text-red-600" />
           <IoIosStar className="text-[1.7rem] text-red-600" />

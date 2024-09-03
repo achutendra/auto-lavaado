@@ -6,7 +6,9 @@ import { faFacebook, faInstagram,  faTwitter } from '@fortawesome/free-brands-sv
 const Footer = () => {
   return (
     <footer className="bg-white text-gray-200 py-6">
+      <div className="mx-[5%]">
       <div className="h-px w-full mb-10 bg-stone-400"></div>
+      </div>
       <div className="container mx-auto px-4">
         <div className="flex flex-col justify-center items-center space-y-4">
           <div className="text-center">

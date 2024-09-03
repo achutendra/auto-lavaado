@@ -5,9 +5,9 @@ const AppointmentContainer = () => {
     <div className="bg-white pt-40 text-white w-[100vw]">
       <div className="appointment-container text-4xl sm:text-6xl lg:text-5xl mx-auto lg:mx-auto -mt-36 w-full md:ml-2 sm:w-[80%] md:w-[100%] lg:w-[100%] text-left sm:text-center md:text-center lg:text-center bg-gray-50">
         <div className="appointment bg-white">
-          <div className="appointment-form w-[93vw] mx-5 sm:w-[100%] md:mx-0 md:w-[45%] lg:w-[60%]">
-            <h1 className=" font-extrabold mb-6 md:text-4xl lg:text-5xl text-white  lg:w-[80%]">
-              LET'S BOOK AN APPOINTMENT
+        <div className="appointment-form w-[93vw] mx-5 sm:w-[100%] md:mx-0 md:w-[45%] lg:w-[60%] ">
+        <h1 className="text-4xl font-extrabold mb-6 md:text-4xl lg:text-5xl xl:text-6xl text-white lg:w-[100%] xl:w-[100%]">
+          LET'S BOOK AN APPOINTMENT
             </h1>
             <form className="font-bold -mt-6 md:-mt-0 sm:-mt-0 lg:-mt-0">
               <div className="lg:grid lg:grid-cols-2 lg:gap-3 ">
@@ -61,7 +61,9 @@ const AppointmentContainer = () => {
             </form>
           </div>
           <div className="contact-us w-[100%] md:w-[45%] lg:w-[50%] -ml-8 lg:ml-20  md:-ml-0 lg:mr-[10%] sm:ml-4">
-            <h1 className=" font-extrabold md:text-4xl lg:text-5xl ">CONTACT US</h1>
+
+            <h1 className="text-4xl font-extrabold md:text-4xl lg:text-5xl xl:text-6xl">CONTACT US</h1>
+
             <div className="text-left grid grid-cols-1 gap-8 leading-8 sm:leading-7 md:leading-7 lg:leading-6 lg:gap-12 -mt-20 md:-mt-0 sm:-mt-0 lg:-mt-0">
             <div className="">
               <strong className="">AHIMAMAU WORKSHOP</strong>
