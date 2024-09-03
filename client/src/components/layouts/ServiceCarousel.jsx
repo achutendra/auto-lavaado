@@ -66,6 +66,7 @@ const ServiceCarousel = () => {
   return (
     <div className="relative max-w-7xl mx-auto bg-black py-12">
       <div className="overflow-x-auto md:overflow-hidden">
+
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{

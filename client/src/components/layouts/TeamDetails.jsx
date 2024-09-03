@@ -6,15 +6,18 @@
   import person4 from "../../images/person4.jpg";
   import person5 from "../../images/person5.jpg";
   import person6 from "../../images/person6.jpg";
+  import person7 from "../../images/person7.jpg";
+
   
   const TeamDetails = () => {
     const serviceItems = [
-      { image: person1, name: "Manish Shukla", position: "Founder of CarWash" },
-      { image: person4, name: "Neeraj Prajapati", position: "Service Advisor" },
-      { image: person3, name: "Ankur Mishra", position: "" },
-      { image: person5, name: "Amit", position: "Head Mechanic" },
-      { image: person2, name: "Amit Mishra", position: "" },
-      { image: person6, name: "Ved Mishra", position: "Bodyshop manager" }
+      { image: person1, name: "MANISH SHUKLA", position: "FOUNDER OF CARWASH" },
+      { image: person4, name: "NEERAJ PRAJAPATI", position: "OPERATIONS MANAGER" },
+      { image: person3, name: "ANKUR MISHRA", position: "" },
+      { image: person5, name: "AMIT", position: "HEAD MECHANIC" },
+      { image: person2, name: "AMIT MISHRA", position: "" },
+      { image: person6, name: "VED MISHRA", position: "BODYSHOP MANAGER" },
+      { image: person7, name: "NITISH RAJPUT", position: "OPERATIONS MANAGER" }
     ];
   
     const [currentIndex, setCurrentIndex] = useState(0);
