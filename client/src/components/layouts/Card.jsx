@@ -24,14 +24,14 @@ function Card({ image, clientsName, review, carName, service }) {
           <q className="text-stone-500 leading-6 text-[1.15rem]">{review}</q>
         </div>
         <div className="">
-        <div className="flex flex-wrap lg:mt-20 md:mt-12 ">
+        <div className="flex flex-wrap ">
           <IoIosStar className="text-[1.7rem] text-red-600" />
           <IoIosStar className="text-[1.7rem] text-red-600" />
           <IoIosStar className="text-[1.7rem] text-red-600" />
           <IoIosStar className="text-[1.7rem] text-red-600" />
           <IoIosStar className="text-[1.7rem] text-red-600" />
         </div>
-        <span className="text-stone-400">
+        <span className="text-stone-400 mb-5">
           {carName} / {service}
         </span>
         </div>

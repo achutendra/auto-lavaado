@@ -23,7 +23,7 @@ const ContactUs = () => {
             <p className="phone"><span className="emoji">📞</span><span className="text">7800022226</span></p>
             <p><span className="emoji">📮</span><span className="text"><a href="mailto:information@office.com">information@office.com</a></span></p>
             <br/>
-            <div className="location-footer">
+            <div className="location-footer -mt-8">
               <hr />
               <a href="#">Find us on map</a>
             </div>
@@ -34,7 +34,7 @@ const ContactUs = () => {
             <p className="phone"><span className="emoji">📞</span><span className="text">7800080666</span></p>
             <p><span className="emoji">📮</span><span className="text"><a href="mailto:information@office.com">information@office.com</a></span></p>
             <br/>
-            <div className="location-footer">
+            <div className="location-footer -mt-2">
               <hr />
               <a href="#">Find us on map</a>
             </div>
