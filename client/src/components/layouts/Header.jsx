@@ -38,15 +38,21 @@ const Header = () => {
               className="h-14 mr-20"
               alt="Auto Lavaado Logo"
             />
-            <div className="hidden md:flex space-x-8 text-lg font-sans">
-              <NavLink to="/" className="text-white hover:text-red-400 text-xl mr-20">
+            <div className="hidden md:flex space-x-8 text-lg font-sans align-middle ">
+              <NavLink to="/" className="text-white hover:text-red-400 text-xl">
                 Home
               </NavLink>
               <NavLink
                 to="/services"
-                className="text-white hover:text-red-400 text-xl"
+                className="text-white hover:text-red-400 text-xl "
               >
                 Services
+              </NavLink>
+              <NavLink
+                to="/paintwork"
+                className="text-white hover:text-red-400 text-xl font-sans"
+              >
+                Paint Work
               </NavLink>
             </div>
           </div>
