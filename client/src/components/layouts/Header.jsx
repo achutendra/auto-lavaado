@@ -49,8 +49,8 @@ const Header = () => {
                 Services
               </NavLink>
               <NavLink
-                to="/paintwork"
-                className="text-white hover:text-red-400 text-xl font-sans"
+                to="/paint-work"
+                className="text-white hover:text-red-400 text-xl "
               >
                 Paint Work
               </NavLink>
@@ -95,6 +95,15 @@ const Header = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/paint-work"
+                className="block px-4 py-2 text-white hover:text-red-400 text-xl"
+                onClick={() => setIsOpen(false)}
+              >
+                Paint Work
               </NavLink>
             </li>
             <li>

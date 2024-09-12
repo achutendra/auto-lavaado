@@ -8,6 +8,7 @@ import Detailing from "../components/layouts/Detailing";
 import TeamDetails from "../components/layouts/TeamDetails";
 import ServiceCarousel from "../components/layouts/ServiceCarousel";
 import ClientReviews from "../components/layouts/ClientReviews";
+import PaintServices from "../components/layouts/paintwork/PaintServices";
 
 const Home = () => {
   return (
@@ -17,8 +18,9 @@ const Home = () => {
         className="relative w-full h-screen bg-cover bg-no-repeat bg-center opacity-90"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <Banner />
+        <Banner textcolor="text-white" />
       </div>
+     
       <div className="py-10 md:py-16 lg:py-20">
         <OurServices />
       </div>

@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
 import Contact from './pages/Contact/Contact'
-import PaintWork from './pages/PaintWork'
+import PaintServices from './components/layouts/paintwork/PaintServices'
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/Contact" element={<Contact />} />
-            <Route path="/paintwork" element={<PaintWork />} />
+            <Route path="/paint-work" element={<PaintServices />} />
           </Routes>
         </BrowserRouter>
     </>
